@@ -1,0 +1,2 @@
+# InspireVidMuiscCodeV
+InspireVidMuisc项目的 源码管理版本（仅涉及InspireMusic和VideMuse的源码，不以子模块的方式进行管理，不涉及二级子模块）
