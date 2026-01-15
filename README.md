@@ -1,7 +1,3 @@
-# InspireVidMuiscCodeV
-
-> InspireVidMuisc项目的 源码管理版本（仅涉及InspireMusic和VideMuse的源码，不以子模块的方式进行管理，不涉及二级子模块）； 以下信息copy自InspireVidMuisc；
-
 # InspireVidMuisc
 Jion VidMuse-LSTV-M into InspireMuisc to surport Video Mode 
 
@@ -528,8 +524,8 @@ train_conf:
 ### 其他
 
 软连接失效重新创建：
-- `ln -s /root/autodl-tmp/InspireMusic/inspiremusic /root/autodl-tmp/InspireMusic/examples/music_generation/inspiremusic`
-- `ln -s /root/autodl-tmp/InspireMusic/tools /root/autodl-tmp/InspireMusic/examples/music_generation/tools`
+- `ln -s /root/autodl-tmp/InspireVidMuisc/InspireMusic/inspiremusic /root/autodl-tmp/InspireVidMuisc/InspireMusic/examples/music_generation/inspiremusic`
+- `ln -s /root/autodl-tmp/InspireVidMuisc/InspireMusic/tools /root/autodl-tmp/InspireVidMuisc/InspireMusic/examples/music_generation/tools`
 
 30s视频特征长度将达到3000，会提示显存溢出，为了做测试，我们在`inspiremusic/dataset/processor.py`中对video_emb做了切片，只取了300：
 - `video_emb = torch.tensor(np.stack(video_emb)[:,:300,:] , dtype=torch.float32)`

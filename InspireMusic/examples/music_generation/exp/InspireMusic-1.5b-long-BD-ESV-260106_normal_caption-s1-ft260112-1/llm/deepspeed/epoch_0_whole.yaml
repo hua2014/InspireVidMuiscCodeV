@@ -1,0 +1,67 @@
+accum_grad: 2
+batch_idx: 1663
+checkpoint: ../../pretrained_models/InspireMusic-1.5B-Long/llm.pt
+config: conf/inspiremusic_1.5b_long.yaml
+cv_data: data/BD-ESV-260106_normal_caption_dev.data.list
+deepscale: false
+deepscale_config: null
+deepspeed: false
+deepspeed_config: ./conf/ds_stage2.json
+dist_backend: nccl
+dtype: bf16
+epoch: 0
+fp16: false
+freezen: true
+grad_clip: 5
+grad_norm: !!python/object/apply:torch._utils._rebuild_tensor_v2
+- !!python/object/apply:torch.storage._load_from_bytes
+  - !!binary |
+    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+    Z2UKcQFYCgAAADE3Mjk5Mzg5NzZxAlgGAAAAY3VkYTowcQNLAU50cQRRLoACXXEAWAoAAAAxNzI5
+    OTM4OTc2cQFhLgEAAAAAAAAAvUtsPQ==
+- 0
+- !!python/tuple []
+- !!python/tuple []
+- false
+- !!python/object/apply:collections.OrderedDict
+  - []
+is_gradient_accumulation_boundary: false
+layer_freezen: false
+log_interval: 100
+lora: false
+lora_alpha: 16
+lora_dropout: 0.1
+lora_rank: 4
+lora_target_modules:
+- k_proj
+- v_proj
+loss_dict:
+  acc: 0.0013826603995902198
+  loss: 0.0395551210130964
+lr: 7.105793405683953e-05
+max_epoch: 200
+model: llm
+model_dir: /root/autodl-tmp/InspireVidMuisc/InspireMusic/examples/music_generation/exp/InspireMusic-1.5b-long-BD-ESV-260106_normal_caption-s1-ft260112-1/llm/deepspeed
+num_workers: 4
+optim: adam
+optim_conf:
+  lr: 0.0001
+pin_memory: true
+prefetch: 8
+save_per_step: 1000
+save_states: model+optimizer
+save_time: 12/01/2026 16:48:13
+scheduler: warmuplr
+scheduler_conf:
+  warmup_steps: 2000
+step: 3960
+tag: CV
+tensorboard_dir: /root/autodl-tmp/InspireVidMuisc/InspireMusic/examples/music_generation/tensorboard/InspireMusic-1.5b-long-BD-ESV-260106_normal_caption-s1-ft260112-1/llm/deepspeed
+timeout: !!python/object/apply:datetime.timedelta
+- 0
+- 30
+- 0
+train_data: data/BD-ESV-260106_normal_caption_train.data.list
+train_engine: deepspeed
